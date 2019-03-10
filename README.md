@@ -8,3 +8,7 @@ Necessary packages:
 cvlib (included in commit)
 numpy (pip install numpy)
 opencv (pip install opencv-python)
+
+If you are interested in YOLO object detection, read their website:
+
+https://pjreddie.com/darknet/yolo/
