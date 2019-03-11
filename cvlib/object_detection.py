@@ -13,7 +13,7 @@ def populate_class_labels():
 
     class_file_name = 'yolov3_classes.txt'
     class_file_abs_path = dest_dir + os.path.sep + class_file_name
-    url = 'https://github.com/arunponnusamy/object-detection-opencv/raw/master/yolov3.txt'
+    url = 'https://github.com/Nico31415/Drowning-Detector/raw/master/yolov3.txt'
     if not os.path.exists(class_file_abs_path):
         download_file(url=url, file_name=class_file_name, dest_dir=dest_dir)
     f = open(class_file_abs_path, 'r')
@@ -75,7 +75,7 @@ def detect_common_objects(image, confidence=0.5, nms_thresh=0.3):
     weights_file_name = 'yolov3.weights'
     weights_file_abs_path = dest_dir + os.path.sep + weights_file_name
 
-    url = 'https://github.com/arunponnusamy/object-detection-opencv/raw/master/yolov3.cfg'
+    url = 'https://github.com/Nico31415/Drowning-Detector/raw/master/yolov3.cfg'
 
     if not os.path.exists(config_file_abs_path):
         download_file(url=url, file_name=config_file_name, dest_dir=dest_dir)
