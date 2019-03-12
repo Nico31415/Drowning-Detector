@@ -11,17 +11,18 @@ if not webcam.isOpened():
     exit()
 
 
-# loop through frames
 
-t0 = time.time()
+
+t0 = time.time() #gives time in seconds after 1970
+
 #variable dcount stands for how many seconds the person has been standing still for
-dcount = 0
 centre0 = np.zeros(2)
 isDrowning = False
 
 #this loop happens approximately every 1 second, so if a person doesn't move,
 #or moves very little for 10seconds, we can say they are drowning
 
+#loop through frames
 while webcam.isOpened():
 
     # read frame from webcam
@@ -55,14 +56,20 @@ while webcam.isOpened():
             #there is still need to tweek the threshold
             #this threshold is for checking how much the centre has moved
 
-            threshold = 5
-            if(hmov>threshold or vmov>threshold):
-                dcount=0
-            elif(hmov<threshold or vmov>threshold):
-                dcount+=1
+            x=time.time()
 
-            if(dcount >= 5):
-                isDrowning = True
+            threshold = 10
+            if(hmov>threshold or vmov>threshold):
+                print(x-t0, 's')
+                t0 = time.time()
+                isDrowning = False
+
+            else:
+
+                print(x-t0, 's')
+                if((time.time() - t0) > 10):
+                    isDrowning = True
+
 
 
 
