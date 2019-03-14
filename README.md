@@ -5,11 +5,9 @@ The approach to this project is to first detect a person, drawing a blue rectang
 
 Doing some research, I discovered that when someone drowns, they tend to stay in a vertical position try to keep their head above the water level. This could be analysed by seeing the ratio of height to width of the triangle to determine if the person is vertically (drowning) or horizontally (swimming or diving) positioned.
 
-Necessary packages:
+To install the necessary packages, run
 
-cvlib (included in commit)
-numpy (pip install numpy)
-opencv (pip install opencv-python)
+pip install -r requirements.txt
 
 If you are interested in YOLO object detection, read their website:
 
