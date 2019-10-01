@@ -3,6 +3,10 @@ from cvlib.object_detection import draw_bbox
 import cv2
 import time
 import numpy as np
+#for PiCamera
+#from picamera Import PiCamera
+#camera = PiCamera
+#camera.start_preview()
 # open webcam
 webcam = cv2.VideoCapture(0)
 
